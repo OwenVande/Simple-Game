@@ -5,7 +5,20 @@
   <link rel="stylesheet" href="simpleGame.css">
 </head>
 <body>
-  <svg width="90%" viewBox="0 0 800 400" style="background-color:red">
+  <p id="counter">Score:0</p>
+  <p id="timeCounter">Time Taken:</p>
+  <svg id="screen" width="90%" viewBox="0 0 800 400" style="background-image: url('http://images.naldzgraphics.net/2012/11/32-orange-seamless-brick-photoshop-pattern-set.jpg')">
+    <image id="item" x="400" y="200" width="50" height="50" href="pickup.png">
+      <animate id="down1" attributeName="y" from="200" to="355" dur="5" begin="0;down2.end"/>
+      <animate id="up" attributeName="y" from="355" to="0" dur="10" begin="down1.end"/>
+      <animate id="down2" attributeName="y" from="0" to="200" dur="5" begin="up.end"/>
+    </image>
+    <image id="item2" x="100" y="700" width="50" height="50" href="pickup.png">
+      <animate id="down12" attributeName="y" from="200" to="355" dur="5" begin="0;down22.end"/>
+      <animate id="up2" attributeName="y" from="355" to="0" dur="10" begin="down12.end"/>
+      <animate id="down22" attributeName="y" from="0" to="200" dur="5" begin="up2.end"/>
+    </image>
+    <image id="player" x="100" y="100" width="70" height="70" href="kool-aid-guy.png"/>
   </svg>
 </body>
 <script type="text/javascript" src="simpleGame.js"></script>
