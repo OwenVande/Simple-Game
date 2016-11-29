@@ -3,6 +3,7 @@ var score = 0
 var timeStart = Date.now()
 var move = true
 var timeShown = false
+
 document.addEventListener("keydown", function(e) {
 
   var playerPosX = Number(document.getElementById("player").getAttribute("x"))
@@ -56,7 +57,7 @@ if(move == true){
     var timeTook = timeStop-timeStart
     timeShown = true
     document.getElementById("reloadButton").innerHTML = "<button onclick="+"reloadPage()"+">Play Again</button>";
-    document.getElementById("timeCounter").textContent = "Time Taken:" + (timeTook/1000)
+    document.getElementById("timeCounter").textContent = "Time Taken:" + (timeTook/1000) + " seconds"
     document.getElementById("screen").setAttribute("style", "background-image: url('http://cdn.digitaloperative.com/wp-content/uploads/2012/11/koolaid.jpg')")
   }
 })
